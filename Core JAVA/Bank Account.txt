@@ -1,0 +1,154 @@
+public class BankAccount{
+	public static void main(String[] args) {
+		
+	   	BankAccount Pranita = new BankAccount("123456", "Pranita");
+	   	
+	   	Pranita.deposit(500);
+	   	Pranita.deposit(1500);
+	   	System.out.println("Deposite Balance is: " + Pranita.getBalance()); // 2000
+
+	   	Pranita.withdraw(400);
+	   	System.out.println("Withdraw Balance is: " + Pranita.getBalance()); // 1600
+	   	
+	}
+	
+		
+		private String accountNumber;
+		private String accountName;
+		private double balance;
+
+		public BankAccount(String accNumber, String accName) {
+			accountNumber = accNumber;
+			accountName = accName;
+			balance = 0;
+		}
+
+		
+		public String getAccountName() {
+			return accountName;
+		}
+		
+		public String getAccountNumber() {
+			return accountNumber;
+		}
+
+		public double getBalance() {
+			return balance;
+		}
+
+		
+		public boolean deposit(double amount) {
+			if (amount > 0) {
+				balance = balance + amount;
+				return true;
+			} 
+			else {
+				return false;
+			}
+		}
+
+		
+		public boolean withdraw(double amount) {
+			if (amount > balance) {
+				return false;
+			}
+			else {
+				balance = balance - amount;
+				return true;
+			}
+		
+		}
+}
+	
+/*.......Checking Account Demo......*/
+
+public class CheckingAccountDemo {
+	public static void main(String[] args) {
+		CheckingAccount checking = new CheckingAccount("123456","Pranita");
+
+		checking.deposit(500);
+		checking.withdraw(200);
+		checking.deposit(700);
+		
+		checking.deductFees();
+		System.out.println("transactions <= 3: " + checking.getBalance());
+
+		
+		checking.deposit(200);
+		
+		checking.deductFees();
+		System.out.println("transactions > 3: " + checking.getBalance());
+	}
+ 
+
+}
+
+
+  class CheckingAccount extends BankAccount {
+	private int transactionCount;
+	private static final int NUM_FREE = 3;
+	private static final double TRANS_FEE = 2.0;
+
+
+	public CheckingAccount(String accNumber, String accName) {
+		super(accNumber, accName);
+		transactionCount = 0;
+	}
+
+	public boolean deposit(double amount) {
+		if (super.deposit(amount)) {
+			transactionCount++;
+			return true;
+		}
+		return false;
+	}
+
+	
+	public boolean withdraw(double amount) {
+		if (super.withdraw(amount)) {
+			transactionCount++;
+			return true;
+		}
+		return false;
+	}
+
+	public void deductFees() {
+		if (transactionCount > NUM_FREE) {
+			double fees = TRANS_FEE * (transactionCount - NUM_FREE);
+			if (super.withdraw(fees)) {
+				transactionCount = 0;
+			}
+		}
+	}
+}
+/*......Savings Account Demo......*/
+
+public class SavingsAccountDemo {
+
+	public static void main(String[] args) {
+		SavingsAccount saving = new SavingsAccount("123456","Pranita",10);
+		
+		saving.deposit(500);
+	   	System.out.println("Balance Before Interest: " + saving.getBalance());
+
+	   	saving.addInterest();
+	   	System.out.println("Balance After Interest: " + saving.getBalance());
+
+	}
+
+}
+class SavingsAccount extends BankAccount {
+	private double interestRate;
+
+	
+	public SavingsAccount(String accNumber, String accName, double rate) {
+		super(accNumber, accName);
+		interestRate = rate;
+	}
+
+	
+	public void addInterest() {
+		double interest = getBalance() * interestRate / 100;
+		deposit(interest);
+	}
+}

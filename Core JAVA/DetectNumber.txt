@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class DetectNumberKey {
+
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("enter key from 1 to 9");
+		int key=sc.nextInt();
+		
+		
+		switch(key){
+		case 0:System.out.println("No. 0 is pressed");
+		break;
+		case 1:System.out.println("No. 1 is pressed");
+		break;
+		case 2:System.out.println("No. 2 is pressed");
+		break;
+		case 3:System.out.println("No. 3 is pressed");
+		break;
+		case 4:System.out.println("No. 4 is pressed");
+		break;
+		case 5:System.out.println("No. 5 is pressed");
+		break;
+		case 6:System.out.println("No. 6 is pressed");
+		break;
+		case 7:System.out.println("No. 7 is pressed");
+		break;
+		case 8:System.out.println("No. 8 is pressed");
+		break;
+		case 9:System.out.println("No. 9 is pressed");
+		break;
+		
+		}
+	}
+
+}

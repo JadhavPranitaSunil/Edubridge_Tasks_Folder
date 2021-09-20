@@ -1,0 +1,46 @@
+package Arrays;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Nested_Try_Catch {
+	public static void main(String[] args) {
+		
+	
+		do{	
+			Scanner c = new Scanner(System.in);
+			System.out.println("Enter the first integer");
+			int a = c.nextInt();
+			int b = c.nextInt();
+		try{
+			Scanner c = new Scanner(System.in);
+			System.out.println("Enter the first integer");
+			int a = c.nextInt();
+			int b = c.nextInt();
+			System.out.println("First try will execute");
+			
+
+		try{
+			
+			System.out.println("Division = " + a/b);
+			System.out.println("Second try also executed");
+		}
+		catch(ArithmeticException w){
+			System.out.println("There is an invalid input" + w);
+		}
+		}
+		catch(InputMismatchException e){
+			System.out.println("You have entered non integer value." + e);
+		}
+		catch(Exception ee){
+			System.out.println(ee);
+		}
+//		finally{
+//			System.out.println(5/0);
+//		}
+		System.out.println("Thank you");
+//		}while(b==0);
+	
+	}
+
+}

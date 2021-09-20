@@ -1,0 +1,54 @@
+import java.util.*;
+public class Arithmatic_Operations 
+{
+	public static void main(String[] args)
+{
+		Scanner sc = new Scanner(System.in);
+		boolean flag = true;
+		String choice;
+		System.out.println("Hii..... Welcome to Edubridge");
+		do
+		{
+		System.out.println("Enter your choice from \n1.ADD \n2.SUB \n3.MUL \n4.DIV");
+		choice = sc.next();
+		}while(flag==true);
+		switch(choice){
+		case "1.ADD" :
+		    System.out.println("Enter the value of a and b : ");
+		    int a = sc.nextInt();
+		    int b = sc.nextInt();
+		    int c = a + b;
+		    System.out.println("The addition of "+a+ " and " +b+ " = " + c);
+		    break;
+		case "2.SUB" :
+		    System.out.println("Enter the value of two integers of your choice : ");
+		    int d = sc.nextInt();
+		    int e = sc.nextInt();
+		    int f = d - e;
+		    System.out.println("The addition of "+d+ " and " +e+ " = " + f);
+		    break;
+		case "3.MUL" :
+			 System.out.println("Enter the value of two integers of your choice : ");
+			    int g = sc.nextInt();
+			    int h = sc.nextInt();
+			    int i = g * h;
+			    System.out.println("The addition of "+g+ " and " +h+ " = " + i);
+			    break;
+		case "4.DIV" : 
+			 System.out.println("Enter the value of two integers of your choice : ");
+			    int j = sc.nextInt();
+			    int k = sc.nextInt();
+			    int l = j / k;
+			    System.out.println("The addition of "+j+ " and " +k+ " = " + l);
+			    break;
+		default:
+			System.out.println("Invalid choice");
+			System.out.println("Please enter the valid choice from \n1.ADD \n2.SUB \n3.MUL \n4.DIV");
+		}
+		System.out.println("Do you want to continue: \nYES \nNO");
+		if(YES)
+			flag=true;	
+		else
+			System.out.println("Thank You .......Have a Great Day........");		
+	}
+}

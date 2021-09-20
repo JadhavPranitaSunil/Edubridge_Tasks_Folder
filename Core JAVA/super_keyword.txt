@@ -1,0 +1,33 @@
+package Edubridge;
+
+public class Super_Keyword {
+	public static void main(String[] args) {
+		child p = new child(5);
+		
+	}
+}
+
+class GP{
+	int a = 10;
+	GP(int a){
+		System.out.println("This is grandparent class constructor ");
+	}
+	
+}
+
+class P extends GP{
+	P(){
+		super(100);{
+			System.out.println("100");
+		}
+		System.out.println("This is parent class constructor.");
+		
+	}
+	
+}
+
+class child{
+	child(int a){
+		System.out.println(a);
+	}
+}

@@ -1,0 +1,34 @@
+package Basic;
+
+public class This_method {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		dog d=new dog();
+		d.work();
+		
+	}
+
+}
+
+
+class dog
+{
+	void bark()
+	{
+		this.color("black");
+		System.out.println("Bark");
+	}
+	
+	void color(String n)
+	{
+		System.out.println(n);
+	}
+	void work()
+	{
+		this.bark();
+		System.out.println("Hiii");
+	}
+	
+}

@@ -1,0 +1,37 @@
+create database employee;
+use employee;
+
+create table em(
+enroll int(10),
+email varchar(50)
+);
+insert into em values(111,'pranita@gmail.com'),
+(112,'pranit@gmail.com'),
+(113,'rakhi@gmail.com'),
+(114,'pooja@gmail.com'),
+(115,'gunjan@gmail.com');
+select * from em;
+create table em2(
+enroll int(10),
+email varchar(50)
+);
+insert into em2 values(111,'pranita@gmail.com'),
+(112,'pranit@gmail.com'),
+(113,'rakhi@gmail.com'),
+(114,'pooja@gmail.com'),
+(115,'gunjan@gmail.com'),
+(116,'ragini@gmail.com'),
+(117,'pratiksha@gmail.com');
+select * from em2;
+
+select * from em cross join em2;
+
+select em.enroll,em2.enroll from em cross join em2;
+
+select em.email,em.enroll from em inner join em2 where em.enroll=em2.enroll;
+
+select * from em natural join em2;
+
+select * from em right outer join em2 on  em.enroll=em2.enroll;
+
+#select * from em fill outer join em2 on  em.enroll=em2.enroll;

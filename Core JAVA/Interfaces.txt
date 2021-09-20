@@ -1,0 +1,42 @@
+package Edubridge;
+
+public class Interface_Class {
+public static void main(String[] args) {
+	b m = new b();
+	m.a();
+	m.b();
+	m.c();
+	m.R();
+}
+}
+class New{
+	public void R(){
+		System.out.println("This is a method of New class");
+	}
+}
+interface A{
+	void a();
+	void b();
+	void c();
+	
+}
+interface B{
+	
+}
+
+class b extends New {
+	
+	public void a() {
+		System.out.println("a method");	
+	}
+
+	public void b() {
+		System.out.println("b method");
+	}
+
+	
+	public void c() {
+		System.out.println("c method");
+	}
+	
+}

@@ -1,0 +1,17 @@
+class Fibonacci
+	{
+   	public static void main(String args[]) {
+        int a, b, c, i = 1;
+        a =0; b = 1; 
+	System.out.print(a+" "+b);
+
+      while(i<9) 
+	{
+         c = a + b; 
+         System.out.print(" "+c);
+         a = b;
+         b = c;
+         i++;
+      }
+   }
+}

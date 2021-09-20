@@ -1,0 +1,92 @@
+public class Looping {
+	public static void main(String[] args) {
+		
+	//Printing of 1 to 99 using For Loop:
+		for(int i = 1; i<=99; i++){
+			System.out.println(i);
+		}
+		
+		// Do while Loop
+		int i = 1;
+		do{
+			System.out.println(i);
+			i++;
+		}while(i<=99);
+		
+		// While Loop
+		
+		int i = 1;
+		while(i>=99){
+		System.out.println(i);
+			i++;
+		}
+		
+		//Reverse operations:
+		
+		//Using For Loop:
+				for(int i = 99; i>=0; i--){
+					System.out.println(i);
+					}
+				
+				// Do while Loop
+				int i = 99;
+				do{
+					System.out.println(i);
+					i--;
+				}while(i>=0);
+//				
+				// While Loop
+				
+				int i = 99;
+				while(i>=1){
+					System.out.println(i);
+					i--;
+				}
+		
+				// Multiples of 3 using For Loop:
+		
+				for(int i = 1; i<=35 ; i++){
+					System.out.println(i*3);
+				}
+				
+				// Multiples of 3 Using while Loop: 
+				
+				int i = 1;
+				while(i<=35){
+					System.out.println(i*3);
+					i++;
+				}
+				
+				// Multiples of 3 Using Do while Loop: 
+				
+				int i = 1;
+				do{
+					System.out.println(i*3);
+					i++;
+				}while(i<=35);
+		
+		// Reverse Multiples of 3 using For Loop:
+		
+		for(int i = 33; i>=1 ; i--){
+			System.out.println(i*3);
+		}
+		
+		// Multiples of 3 Using while Loop: 
+		
+		int i = 33;
+		while(i>=1){
+			System.out.println(i*3);
+			i--;
+		}
+		
+//		// Multiples of 3 Using Do while Loop: 
+	
+		int i = 35;
+		do{
+			System.out.println(i*3);
+			i--;
+		}while(i>=1);
+				
+	}
+
+}

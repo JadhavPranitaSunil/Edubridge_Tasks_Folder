@@ -1,0 +1,64 @@
+create database MIT;
+drop database MIT;
+
+create database PRANITA;
+use PRANITA;
+
+
+create table ECE(
+s_name varchar(50),
+s_rollno int (10),
+s_email varchar(50),
+s_adhar int(12)
+);
+
+
+create table CSE(
+s_name varchar(50),
+s_rollno int (10),
+s_email varchar(50),
+s_adhar int(12)
+);
+
+
+create table MECH(
+s_name varchar(50),
+s_rollno int (10),
+s_email varchar(50),
+s_adhar int(12)
+);
+
+
+insert ECE values('Pranita',101,'p@gmail.com',123456),
+('Pranil',102,'p12@gmail.com',12345678),
+('Pranita',103,'p123@gmail.com',12345632),
+('Pranali',104,'p1234@gmail.com',12345611),
+('Pranit',105,'p54@gmail.com',12345654);
+
+
+insert CSE values('Pranita',201,'p@gmail.com',123456),
+('Pranil',202,'p12@gmail.com',12345678),
+('Prajkta',203,'p123@gmail.com',12345632),
+('Pranali',204,'p1234@gmail.com',12345611),
+('Pranit',205,'p54@gmail.com',12345654);
+
+
+insert MECH values('Pranita',301,'p@gmail.com',123456),
+('Pranil',302,'p12@gmail.com',12345678),
+('Prajkta',303,'p123@gmail.com',12345632),
+('Pranali',304,'p1234@gmail.com',12345611),
+('Pranit',305,'p54@gmail.com',12345654);
+
+
+select * from ECE;
+
+
+select * from CSE;
+
+
+select * from MECH;
+ 
+
+select s_name from ECE where s_name= 'Pranita';
+
+

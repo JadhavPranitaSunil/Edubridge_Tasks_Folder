@@ -1,0 +1,34 @@
+import java.util.*;
+public class Problem_OF_Array 
+{
+	public static void main(String[] args) 
+{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : " );
+		int size = sc.nextInt();
+		if(size<=0 || size % 2 != 0)
+			System.out.println("Invalid input");
+		else
+		{	
+				int[] Roll_no = new int[size];
+				int [] marks = new int[size];
+				System.out.println("Enter Array elements : ");
+				int count = 0;
+				for(int i =0; i< size; i++)
+				{
+					Roll_no[i] = sc.nextInt();
+					marks[i] = sc.nextInt();
+					if(marks[i] >= 70)
+					{
+						System.out.println("Roll No. "+ Roll_no[i] + " have cleared the exam." );
+						count++;
+					}
+				}	
+					
+		}
+}
+}
+
+	
+
+

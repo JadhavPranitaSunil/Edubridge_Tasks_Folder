@@ -1,0 +1,46 @@
+package Edubridge;
+import java.util.*;
+
+public class Salary_Based_Problem {
+
+	public static void main(String[] args) {
+		
+		int salary, shifts , saving;
+		Scanner sc = new Scanner(System.in);
+		salary = 0;
+		
+		do{
+			System.out.println("Enter the salary : ");
+			salary = sc.nextInt();
+			
+			if(salary > 8000)
+				System.out.println("Salary is too large.");
+			
+			else if (salary<0)
+				System.out.println("Salary is too small");
+
+			}while(salary > 8000 || salary <0);
+		
+
+			
+	do{
+		System.out.println("Enter the sifts : ");
+		shifts = sc.nextInt();
+		if(shifts < 0)
+			System.out.println("Shifts value is too small.");
+		} while(shifts <= 0);
+		
+		if(salary > 0 && salary < 8000 && shifts > 0)
+		{
+			double result = calculateSal(salary, shifts );
+			System.out.println("The saving ammount is Rs " +result);
+			}
+		
+}
+
+	static double calculateSal(int salary, int shifts ){      //Method calling
+		double savings = (salary/2) +  shifts*(0.02 * salary);
+		return savings;
+	}
+	
+}
