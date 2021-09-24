@@ -1,0 +1,38 @@
+.image{
+	width: 1350px;
+	height: 650px;
+}
+
+  form{   
+        border: 3px solid #f1f1f1;   
+}   
+  
+  input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+		font-size:10px;
+    }   
+       
+       
+.container{   
+	position: absolute;
+		width: 500px;
+		border-radius: 17px;  
+    padding-left: 7px;  
+	padding-right: 7px;
+        /* padding: 25px;    */
+        background-color: white;  
+		 top: 100px;
+ 		right: 350px;   
+		 /* border: solid;  */
+		
+	
+    } 
+
+label{
+	font-size: 20px;
+}
